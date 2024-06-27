@@ -1,0 +1,97 @@
+
+#OBS: Zerar o valor da combinação = Descartar completamente de imediato - Significa que algo que não pode ocorrer na combinação ocorreu.
+#OBS2: Definir prioridades "padrão" pra cada coisa
+#OBS3: Se existir interface:
+    #Opção avançada de definição de prioridade com números 0-10
+    #Opção básica, com: Nenhuma(0), Baixa(2.5), Média(5), Alta(7.5), Toda(10)
+#OBS4: Dias da semana se necessarios serem representados sao representados como 0-Segunda, 1-Terça...  6-Domingo
+#OBS5: Horarios são representados por XX:XX e não podem incluir horarios quebrados (apenas intervalos de 30 em 30, 14:00, 14:30, 15:00 etc..)
+
+#Personalização de dados pessoais
+    #NOME
+    #SOBRENOME
+    #IDADE
+    #PERIODO
+    #CURSO
+
+#Semestre (1 ou 2) ou data do semestre (d/m até d/m) e Ano.
+  #Apartir disso definir uma data limite junto com um ano.
+
+#Matérias
+    #Nome da matéria
+    #Quantidade de créditos
+    #Dificuldade da matéria
+    #Professor/Horário de matérias
+        #Professor: Se houver mais de um professor
+            #Definição básica é sem preferencia
+            #Opção de atribuir uma nota de prioridade a cada professor
+        #Horário: Se houver mais de um horário
+            #Definição básica é sem preferencia
+            #Opção de atribuir uma nota de prioridade a cada horário para matéria específica
+
+#Prioridades: 10 Caso seja uma preferencia que não é descartavel, logo zera o valor da combinação se não for atendida
+#Prioridades: Outras prioridades não extremas mudam a nota da combinação de acordo com seu peso.
+#Prioridades: 0 Caso seja uma preferencia quase inexistente, só e levada em conta se a nota idependente dela for equivalente a 10 (desempate em gabaritos)
+
+#Maximos, Mínimos, Ideal
+    #Sendo menor que o mínimo, zera o valor da combinação.
+    #Sendo maior que o máximo, zera o valor da combinação
+    #Estando dentro do intervalo, quanto mais se aproximar do ideal maior o valor atribuido a combinação
+
+#Preferencia de horário (chegada/saida)
+    #Definição geral de horário mais cedo com limites máximos e mínimos e um ideal.(Limite para todos os dias que não tenham especificação)
+        #Especificação por dia da semana
+    #Definição geral de horário mais tarde de saida limites máximos e mínimos e um ideal. (Limite para todos os dias que não tenham especificação)
+        #Especificação por dia da semana
+
+#Preferencia de carga total (Horas) por dia
+    #Definir limites máximos e mínimos e um ideal.
+    #Opção geral (Limite para todos os dias que não tenham especificação)
+    #Especificação por dia da semana (Possibilidade de adicionar uma carga com limites diferentes para dias diferentes).
+  
+#Preferencia de algum intervalo?
+  #Adiçoes de intervalos, (Lista de dias da semana ou definição geral, prioridade do intervalo)
+  #Ex intervalo 1 (14:00 as 15:00), segundas e terças, com prioridade 5.0
+  #Ex intervalo 2 (16:00 as 17:00), quartas, com prioridade de 10.0 
+  #OBS: Prioridade 10 = Precisa existir. 
+#Preferencia por horarios separados ou juntos(?)
+  #Extensão da preferencia, basicamente referente a distancias de horarios pro dia inteiro
+  #Definir dia (se não tem definição de dia é pra todos os dias da semana)
+  #Definir diferença (0, 1, 2, 3 etc)
+  #Definir quantidade de repetição (0, 1, 2, etc) #0 igual o maximo possivel
+  #Combinaçoes padroes tipo 0 em dia, 0 em diferença, 0 em repetição, 10 em prioridade > So são apresentados horarios que nunca tem intervalos em nenhum dia
+
+#Preferencias de dificuldade
+    #Baseado na combinação atual e na definição de dificuldade das matérias, calcular uma média inicial pra dificuldade da combinação.
+    #Definir limites máximos e mínimos e um ideal.
+
+#Quantos créditos
+  #Definir limites máximos e mínimos e um ideal.
+
+#Dias livres
+ #Dia e prioridade do dia estar livre
+
+
+#FERIADOS AINDA A ADICIONAR (TALVEZ)
+#Preferencia de feriados
+    #Prioridade da importancia dos feriados (0-10)
+    #Edição dos feriados
+        #Definição geral de feriados inicial.
+            #Edição de feriados
+                #Desativar feriados pré definidos 
+                #Adicionar feriados
+        #Considera emendas? Sim/Não? 
+            #Emenda por definição geral definida como sexta se quinta e segunda se terça.
+                #Possibilidade de edição de configuração de emendas
+
+#feriados tem que ser melhor desenvolvido tbm, é uma questão de ocorrência, se tem 3423 
+#feriados na terça e eu quero ir a menos aulas x então dou uma prioridade tal a ter um
+#dia mais livre na terça etc, tbm nao ta bem configurado
+
+#DEFINIR LIMITE PARA ESPECIFICAÇOES!! (no maximo uma especificação por dia)
+
+#PRIMEIRO -> DEFINIR NUMERO DE POSSIBILIDADES e EXCLUIR TODAS AS POSSIBILIDADES ZERADAS
+
+
+
+

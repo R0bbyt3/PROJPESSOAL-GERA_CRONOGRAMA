@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de Preferências Acadêmicas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personalização de Dados Acadêmicos e Pessoais</h1>
+        
+        <!-- Formulário de Dados Pessoais -->
+        <section id="dados-pessoais">
+            <h2>Dados Pessoais</h2>
+            <form>
+                <input type="text" id="nome" placeholder="Nome">
+                <input type="text" id="sobrenome" placeholder="Sobrenome">
+                <input type="number" id="idade" placeholder="Idade">
+                <input type="text" id="curso" placeholder="Curso">
+                <input type="number" id="periodo" placeholder="Período">
+                <button type="button" onclick="salvarDadosPessoais()">Salvar Dados</button>
+            </form>
+        </section>
+
+        <!-- Formulário de Matérias -->
+        <section id="materias">
+            <h2>Matérias</h2>
+            <form>
+                <input type="text" id="nome-materia" placeholder="Nome da Matéria">
+                <input type="number" id="creditos" placeholder="Créditos">
+                <select id="dificuldade">
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+                <button type="button" onclick="adicionarMateria()">Adicionar Matéria</button>
+            </form>
+        </section>
+
+        <!-- Outras Seções podem ser adicionadas aqui -->
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
